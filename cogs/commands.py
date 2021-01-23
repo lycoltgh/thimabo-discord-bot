@@ -13,21 +13,16 @@ class Load(commands.Cog):
 
 
     @commands.command()
-    async def help(self, ctx):
+    async def commands(self, ctx):
         em = discord.Embed(
             color=teal
         )
         em.add_field(name="`Prefix`", value='**My Prefix Is** - <', inline = False)
-        em.add_field(name="`Commands`", value='Do <Commands to get a list of the finest commands i have to offer.', inline = False)
-        em.add_field(name='`Developer`', value="Do <dev to see who made me!", inline = False)
+        em.add_field(name="Commands", value='Do <Commands to get a list of the finest commands i have to offer.', inline = False)
+        em.add_field(name='Developer', value="Do <dev to see who made me!", inline = False)
         em.set_author(name="Information", icon_url="https://cdn.discordapp.com/attachments/787019308260917289/802610114187231242/gwb.gif")
         em.set_thumbnail(url="https://cdn.discordapp.com/attachments/787019308260917289/802610114187231242/gwb.gif")
 
         await ctx.send(embed=em)
 
 print('LOADED')
-
-
-
-def setup(client):
-    client.add_cog(Load(client))
